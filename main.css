@@ -1,0 +1,47 @@
+body {
+ 
+}
+
+.bottom {
+  margin: 20px;
+}
+
+.fast-5 {
+  height: 80px;
+  width: 80px;
+  font-size: 25px;
+}
+
+.dep-top-input {
+  width: 250px;
+}
+
+.dep-top-amt {
+  width: 100px;
+}
+
+.c-dep {
+  height: 80px;
+  width: 80px;
+  font-size: 25px;
+}
+
+.c-with {
+  height: 80px;
+  width: 80px;
+  font-size: 25px;
+}
+
+.btn-main {
+  height: 250px;
+  width: 250px;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.check {
+    background-color: #33a6cc !important;
+    color: white !important;
+    border-radius: 0 !important;
+    margin: 0 auto;
+}

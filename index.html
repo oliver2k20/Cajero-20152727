@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src='jquery.js'></script>
+    <script type="text/javascript" src='bootstrap.js'></script>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="main.css">
+    <script type="text/javascript" src='script.js'></script>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="container">
+        <div class="card">
+          <h1 class="header text-center">Cajero Popular</h1>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row text-center">
+          <button type="button" name="button" class='btn btn-default balance btn-main check' data-toggle="modal" data-target="#modal-balance">Balance</button><!--
+          --><button type="button" name="button" class='btn btn-default fast btn-main check' data-toggle="modal" data-target="#modal-fastcash">Avance</button>
+        <div class="row text-center">
+          <button type="button" name="button" class='btn btn-default dep btn-main check' data-toggle="modal" data-target="#modal-deposit">Depositar</button><!--
+          --><button type="button" name="button" class='btn btn-default with btn-main check' data-toggle="modal" data-target="#modal-withdraw">Retirar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Balance modal -->
+    <div class="modal fade" id="modal-balance" role="alertdialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h2 class="text-center">Balance</h2>
+          </div>
+          <div class="modal-body">
+            <div class="balance">
+              <h1 class="bal text-center">RD$0</h1>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Atrás</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="modal-fastcash" role="alertdialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h2 class="text-center">Avance de efectivo</h2>
+          </div>
+          <div class="modal-body">
+            <div class="row top text-center">
+              <button type="button" class="btn btn-default fast-5 f5 check">100</button>
+              <button type="button" class="btn btn-default fast-5 f10 check">200</button>
+              <button type="button" class="btn btn-default fast-5 f20 check">500</button>
+              <button type="button" class="btn btn-default fast-5 f30 check">1000</button>
+              <button type="button" class="btn btn-default fast-5 f40 check">1500</button>
+              <button type="button" class="btn btn-default fast-5 f50 check">2000</button>
+            </div>
+            
+            <div class="row bottom text-center">
+              <h3 class="dep-bal">Balance actual: RD$0</h3>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Atrás</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+      <div class="modal fade" id="modal-deposit" role="alertdialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h2 class="text-center">Depositar</h2>
+            </div>
+            <div class="modal-body">
+              <div class="row top text-center">
+                <input class="dep-top-input" type="text"  placeholder="Numero de cuenta">
+                <input class="dep-top-amt" type="text" name="name" placeholder="monto">
+                <button class="btn btn-default sub-dep check" type="button" name="button">Aceptar</button>
+              </div>
+              <div class="row center text-center">
+                <h3>O</h3>
+              </div>
+              <div class="row bottom text-center">
+                <h2>Monto de deposito</h2>
+                <button type="button" class="btn btn-default c-dep v1 check" dvalue='1'>100</button>
+                <button type="button" class="btn btn-default c-dep v5 check" dvalue='5'>200</button>
+                <button type="button" class="btn btn-default c-dep v10 check" dvalue='10'>500</button>
+                <button type="button" class="btn btn-default c-dep v25 check" dvalue='25'>1000</button>
+                <button type="button" class="btn btn-default c-dep v50 check" dvalue='50'>2000</button>
+              </div>
+
+              <div class="row bottom text-center">
+                <h3 class="dep-bal">Balance actual: RD$0</h3>
+              </div>
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Atrás</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+        <div class="modal fade" id="modal-withdraw" role="alertdialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h2 class="text-center">Retirar</h2>
+              </div>
+              <div class="modal-body">
+                <div class="row top text-center">
+                  <input class="with-top-amt" type="text" name="name" placeholder="monto">
+                  <button class="btn btn-default sub-with check" type="button" name="button">Aceptar</button>
+                </div>
+                <div class="row center text-center">
+                  <h3>O</h3>
+                </div>
+                <div class="row bottom text-center">
+                  <h2>Retiro rápido</h2>
+                  <button type="button" class="btn btn-default c-with w1 check" wvalue='1'>100</button>
+                  <button type="button" class="btn btn-default c-with w5 check" wvalue='5'>200</button>
+                  <button type="button" class="btn btn-default c-with w10 check" wvalue='10'>500</button>
+                  <button type="button" class="btn btn-default c-with w25 check" wvalue='25'>1500</button>
+                  <button type="button" class="btn btn-default c-with w50 check" wvalue='50'>2000</button>
+                </div>
+
+                <div class="row bottom text-center">
+                  <h3 class="with-bal">Balance actual: RD$0</h3>
+                </div>
+
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Atrás</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  </body>
+</html>
